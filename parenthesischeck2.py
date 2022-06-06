@@ -1,11 +1,9 @@
 openingparenthesis = '[{('
-
 closingparenthesis = ')}]'
+
 openingList = []
 
-
 exp = '(){' #user can input any expression of choice
-
 
 pairs = {')':'(', '}':'{',']':'['}
 
