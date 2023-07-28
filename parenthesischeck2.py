@@ -3,7 +3,7 @@ closingparenthesis = ')}]'
 
 openingList = []
 
-exp = '(){' #user can input any expression of choice
+exp = '[{(){}}]' #user can input any expression of choice
 
 pairs = {')':'(', '}':'{',']':'['}
 
@@ -14,11 +14,15 @@ def checkParenthesis(exp):
         elif i in closingparenthesis:
             if openingList==[]:
                 return False
-            if pairs[i] == openingList[-1]:
+            elif pairs[i] == openingList[-1]:
                     openingList.pop()
-    return True 
+            else:
+                 return False
+    if openingList==[]:
+         return True
+    else:
+         return False
 
 print(checkParenthesis(exp))
-
 
 
